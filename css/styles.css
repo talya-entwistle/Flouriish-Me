@@ -1,0 +1,1019 @@
+/*-------------------
+*******Fonts*******
+-------------------*/
+
+@font-face {
+  font-family: Header;
+  src: url("../fonts/FUTRFW.TTF");
+}
+
+@font-face {
+  font-family: Vogue;
+  src: url("../fonts/Vogue.ttf");
+}
+
+@font-face {
+  font-family: LemonMilk;
+  src: url("../fonts/LEMONMILK-Regular.otf");
+}
+
+@font-face {
+  font-family: Champagne;
+  src: url("../fonts/ChampagneLimousines.ttf");
+}
+
+@font-face {
+  font-family: ChampagneBold;
+  src: url("../fonts/ChampagneLimousinesBold.ttf");
+}
+
+/*-------------------
+****Universal CSS****
+-------------------*/
+
+body {
+  margin: 0px;
+}
+
+/*-------------------
+*****Header CSS****
+-------------------*/
+header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0);
+  width: 100%;
+  height: 20vh;
+  position: absolute;
+  z-index: 5;
+}
+
+.logo {
+  display: flex;
+  justify-content: left;
+}
+
+.logo-image-small {
+  width: 50px;
+  padding: 25px;
+  display: flex;
+  justify-content: left;
+}
+
+.logo-image-large {
+  display: none;
+}
+
+.home,
+.services,
+.gallery,
+.about {
+  display: none;
+}
+
+/*-------------------
+**Homepage Hero CSS**
+-------------------*/
+
+.hero-image {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(255, 255, 255, 0) 70%,
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../images/hero-image.jpg");
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+  height: 100vh;
+}
+
+.scroll {
+  display: none;
+}
+
+/*-------------------
+***Hamburger CSS****
+-------------------*/
+
+.hamburger-section {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.hamburger-section.is-active {
+  transform: translateX(0%);
+}
+
+.hamburger-close.is-active {
+  transform: translateX(100%);
+}
+
+.hamburger-overlay {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.7);
+	top: 0;
+	bottom: 0;
+	left: 100%;
+	height: 100vh;
+	width: 100%;
+	margin-left: auto;
+	z-index: 1;
+	transition: 0.5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hamburger-overlay.is-open {
+	left: 0%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hamburger-icon {
+	width: 35px;
+	padding-right: 20px;
+	cursor: pointer;
+	z-index: 30;
+}
+
+.hamburger-icon .bar {
+	background: #ffffff;
+	height: 5px;
+	margin: 5px 0px;
+	transition: all 0.5s;
+	margin-left: auto;
+}
+
+.hamburger-icon.is-active .bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger-icon.is-active .bar:nth-child(2) {
+  transform: scale(0);
+}
+
+.hamburger-icon.is-active .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.hamburger-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+}
+
+.hamburger-home,
+.hamburger-services,
+.hamburger-gallery,
+.hamburger-about,
+.hamburger-close {
+  font-family: "Header";
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+  z-index: 20;
+  padding: 7px 0px 7px 0px;
+}
+
+/*-------------------
+***Home Page About***
+-------------------*/
+
+.about-container {
+  background-color: #ffffff;
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-container {
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.home-page-heading {
+  font-family: "LemonMilk";
+  font-size: 30px;
+  margin-top: 0px;
+  padding: 50px 50px 0px 50px;
+}
+
+.home-page-description {
+  font-family: "Champagne";
+  font-weight: 500;
+  padding-bottom: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 0px 50px 50px 50px;
+}
+
+.image-container {
+  background-image: url("../images/home-about.jpg");
+  background-position: left center;
+  background-size: cover;
+  object-fit: cover;
+  height: 50vh;
+  width: 100%;
+}
+
+.services-link {
+  font-family: "LemonMilk";
+  font-size: 13px;
+  color: #ffffff;
+  padding: 10px 10px 10px 10px;
+  background-color: #6cc6bc;
+  transition: 0.5s;
+}
+
+.services-button {
+  padding: 5px 5px 50px 0px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.services-link:hover {
+  background-color: #38ada0;
+}
+
+.you {
+  color: #6cc6bc;
+}
+
+/*-------------------
+**Services Hero CSS**
+-------------------*/
+
+.hero-image-services {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    ),
+    url("../images/sketch.jpg");
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+  height: 100vh;
+}
+
+.hero-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100vh;
+}
+
+.services-title {
+  margin: 0;
+  color: #6cc6bc;
+  font-family: "LemonMilk";
+  font-size: 50px;
+  padding: 0px 0px 50px 0px;
+}
+
+/*-------------------
+**Services Page CSS**
+-------------------*/
+
+.full-styling-header,
+.partial-styling-header,
+.mini-styling-header {
+  font-family: "LemonMilk";
+  margin: 0px;
+  padding: 50px 0px 20px 50px;
+  font-size: 30px;
+}
+
+.full-styling-description,
+.partial-styling-description,
+.mini-styling-description {
+  font-family: "Champagne";
+  font-weight: 500;
+  font-size: 20px;
+  padding: 0px 50px 0px 50px;
+}
+
+.full-styling-button,
+.partial-styling-button,
+.mini-styling-button {
+  padding: 5px 5px 50px 0px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 0px 0px 0px 50px;
+  cursor: pointer;
+}
+
+.full-styling-button-text,
+.partial-styling-button-text,
+.mini-styling-button-text {
+  font-size: 14px;
+  color: #ffffff;
+  padding: 10px 10px 10px 10px;
+  background-color: #6cc6bc;
+  transition: 0.5s;
+  font-family: "LemonMilk";
+  cursor: pointer;
+}
+
+.full-styling-button-text:hover,
+.partial-styling-button-text:hover,
+.mini-styling-button-text:hover {
+  background-color: #38ada0;
+}
+
+.full-styling-image {
+  background-image: url("../images/full-styling.jpg");
+  background-position: left center;
+  background-size: cover;
+  object-fit: cover;
+  height: 50vh;
+  width: 100%;
+}
+
+.partial-styling-image {
+  background-image: url("../images/partial-styling.jpg");
+  background-position: left center;
+  background-size: cover;
+  object-fit: cover;
+  height: 50vh;
+  width: 100%;
+}
+
+.mini-styling-image {
+  background-image: url("../images/mini-makeover.jpg");
+  background-position: right center;
+  background-size: cover;
+  object-fit: cover;
+  height: 50vh;
+  width: 100%;
+}
+
+.desktop-full-styling-text-container,
+.desktop-partial-styling-text-container,
+.desktop-mini-styling-text-container {
+  display: none;
+}
+
+.desktop-full-styling-header,
+.desktop-partial-styling-header,
+.desktop-mini-styling-header {
+  display: none;
+}
+
+.desktop-full-styling-description,
+.desktop-partial-styling-description,
+.desktop-mini-styling-description {
+  display: none;
+}
+
+/*-------------------
+**Gallery Hero CSS**
+-------------------*/
+
+.hero-image-gallery {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    ),
+    url("../images/gallery-hero-image.jpg");
+  background-position: 60% center;
+  background-size: cover;
+  object-fit: cover;
+  height: 100vh;
+}
+
+.hero-text-container-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100vh;
+}
+
+.gallery-title {
+  margin: 0;
+  color: #6cc6bc;
+  font-family: "LemonMilk";
+  font-size: 50px;
+  padding: 0px 0px 50px 0px;
+}
+
+/*-------------------
+**Gallery Page CSS**
+-------------------*/
+
+.slideshow-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.slideshow-image {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  opacity: 0;
+  animation: slideshow 61s infinite;
+}
+
+.slideshow-image:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slideshow-image:nth-child(2) {
+  animation-delay: 10s;
+}
+
+.slideshow-image:nth-child(3) {
+  animation-delay: 20s;
+}
+
+.slideshow-image:nth-child(4) {
+  animation-delay: 30s;
+}
+
+.slideshow-image:nth-child(5) {
+  animation-delay: 40s;
+}
+
+.slideshow-image:nth-child(6) {
+  animation-delay: 50s;
+}
+
+.slideshow-image img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slideshow-item-text {
+  width: 50%;
+  position: absolute;
+  top: 75%;
+  left: 0px;
+
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  padding: 10px 20px 20px 20px;
+}
+
+.slideshow-text-header {
+  font-family: "LemonMilk";
+}
+
+.slideshow-text {
+  font-family: "Champagne";
+}
+
+/*-------------------
+*****About CSS*****
+-------------------*/
+
+.about-hero-image {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(255, 255, 255, 0) 70%,
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../images/about-us-hero.jpg");
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+  height: 100vh;
+}
+
+.about-title {
+  margin: 0;
+  color: #6cc6bc;
+  font-family: "LemonMilk";
+  font-size: 50px;
+  padding: 0px 0px 50px 0px;
+}
+
+.about-image-container {
+  display: none;
+}
+
+.about-image-container-mobile {
+  background-image: url("../images/about-us.jpg");
+  background-position: 10% center;
+  background-size: cover;
+  object-fit: cover;
+  height: 50vh;
+  width: 100%;
+}
+
+/*-------------------
+*****Footer CSS*****
+-------------------*/
+
+footer {
+  width: 100%;
+  height: 40%;
+  background-color: #6cc6bc;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.footer-nav a {
+  list-style: none;
+  text-decoration: none;
+  font-family: "LemonMilk";
+  font-size: 12px;
+  color: #ffffff;
+  padding: 5px 0px 0px 5px;
+  transition: 0.5s;
+}
+
+.footer-nav a:hover {
+  color: #2b8379;
+}
+
+/*-------------------
+****Animations*****
+-------------------*/
+
+@keyframes navigation {
+  from {
+    border: none;
+  }
+  to {
+    border-bottom: 3px solid white;
+  }
+}
+
+@keyframes move-wheel {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(5px);
+  }
+}
+
+@keyframes move-arrow {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes toggle-menu {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slideshow {
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+}
+
+/*-------------------
+****Media Queries****
+-------------------*/
+
+@media (min-width: 481px) {
+  .logo {
+    justify-content: center;
+  }
+
+  .logo-image-small {
+    width: 70px;
+    padding: 25px 0px 25px 25px;
+    justify-content: left;
+  }
+
+  header {
+    justify-content: left;
+  }
+
+  .home-page-heading {
+    font-size: 40px;
+  }
+
+  .image-container {
+    background-image: url("../images/home-about.jpg");
+  }
+
+  .gallery-image {
+    width: 80vw;
+    height: 80vw;
+    padding: 0px 50px 50px 50px;
+  }
+}
+
+@media (min-width: 769px) {
+  .logo {
+    justify-content: center;
+  }
+
+  .logo-image-large {
+    width: 150px;
+    padding: 30px 40px 20px 40px;
+    display: block;
+  }
+
+  .logo-image-small {
+    display: none;
+  }
+
+  .home,
+  .services,
+  .gallery,
+  .about {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    font-family: "Header", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .home::after,
+  .services::after,
+  .gallery::after,
+  .about::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgba(240, 94, 142, 1);
+    transition: width 0.3s;
+  }
+
+  .home:hover:after,
+  .services:hover:after,
+  .gallery:hover:after,
+  .about:hover:after {
+    width: 100%;
+  }
+
+  header {
+    justify-content: center;
+  }
+
+  .left,
+  .right {
+    width: 30%;
+  }
+
+  .nav-left,
+  .nav-right {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .hero-image {
+    height: 100vh;
+  }
+
+  .hamburger-icon {
+    display: none;
+  }
+
+  .hamburger-section {
+    width: 0px;
+  }
+
+  .scroll {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .mouse {
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    height: 40px;
+    width: 20px;
+    display: flex;
+  }
+
+  .mouse span {
+    background-color: #ffffff;
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-radius: 50%;
+    margin: auto;
+    animation: move-wheel 1s linear infinite;
+  }
+
+  .arrow {
+    display: flex;
+  }
+
+  .arrow span {
+    display: block;
+    width: 5px;
+    height: 5px;
+    border: 2px solid transparent;
+    border-right-color: #ffffff;
+    border-bottom-color: #ffffff;
+    transform: rotate(45deg);
+    animation: move-arrow 0.7s alternate infinite;
+  }
+
+  .hamburger-overlay {
+    display: none;
+  }
+
+  .home-page-heading {
+    font-size: 60px;
+  }
+
+  .text-container {
+    width: 50vw;
+  }
+
+  .image-container {
+    height: 100vh;
+    width: 50vw;
+    background-image: url("../images/home-about.jpg");
+  }
+
+  .about-container {
+    flex-direction: row;
+  }
+
+  .text-container {
+    height: 100vh;
+  }
+
+  .home-page-description {
+    font-size: 24px;
+    padding-bottom: 50px;
+  }
+
+  .services-link {
+    font-size: 20px;
+    padding: 20px 30px 20px 30px;
+  }
+
+  .services-button {
+    padding: 5px 0px 0px 0px;
+  }
+
+  .footer-nav {
+    padding: 100px 0px 100px 0px;
+  }
+
+  .hero-text-container {
+    justify-content: right;
+    align-items: flex-end;
+    height: 100vh;
+  }
+
+  .services-title {
+    font-size: 120px;
+    padding: 0px 50px 50px 0px;
+  }
+
+  .full-styling-container,
+  .partial-styling-container,
+  .mini-styling-container {
+    height: 100vh;
+    background-color: #ffffff;
+  }
+
+  .full-styling-image,
+  .partial-styling-image,
+  .mini-styling-image {
+    display: none;
+  }
+
+  .desktop-full-styling-image {
+    background-image: url("../images/full-styling.jpg");
+    background-position: right center;
+    background-size: cover;
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .desktop-partial-styling-image {
+    background-image: url("../images/partial-styling.jpg");
+    background-position: right center;
+    background-size: cover;
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+  }
+
+  .desktop-mini-styling-image {
+    background-image: url("../images/mini-makeover.jpg");
+    background-position: right center;
+    background-size: cover;
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+  }
+
+  .desktop-full-styling-text-container,
+  .desktop-mini-styling-text-container {
+    padding: 50px;
+    top: 50px;
+    margin: 0px 0px 0px 50px;
+    height: 50vh;
+    width: 400px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 1);
+    position: relative;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+  }
+
+  .desktop-partial-styling-text-container {
+    padding: 50px;
+    top: 50px;
+    margin: 0px 50px 0px 0px;
+    height: 50vh;
+    width: 400px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 1);
+    position: relative;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+  }
+
+  .full-styling-header,
+  .partial-styling-header,
+  .mini-styling-header {
+    display: none;
+  }
+
+  .full-styling-description,
+  .partial-styling-description,
+  .mini-styling-description {
+    display: none;
+  }
+
+  .desktop-full-styling-header,
+  .desktop-partial-styling-header,
+  .desktop-mini-styling-header {
+    font-family: "LemonMilk";
+    padding: 0px 0px 20px 0px;
+    margin: 0px;
+    font-size: 55px;
+    display: block;
+  }
+
+  .desktop-full-styling-description,
+  .desktop-partial-styling-description,
+  .desktop-mini-styling-description {
+    font-family: "Champagne";
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0px 0px 40px 0px;
+    display: block;
+  }
+
+  .full-styling-button,
+  .partial-styling-button,
+  .mini-styling-button {
+    display: none;
+  }
+
+  .full-styling-button-text,
+  .partial-styling-button-text,
+  .mini-styling-button-text {
+    display: none;
+  }
+
+  .desktop-full-styling-button,
+  .desktop-partial-styling-button,
+  .desktop-mini-styling-button {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .desktop-full-styling-button-text,
+  .desktop-partial-styling-button-text,
+  .desktop-mini-styling-button-text {
+    font-size: 16px;
+    color: #ffffff;
+    padding: 15px 20px 15px 20px;
+    background-color: #6cc6bc;
+    transition: 0.5s;
+    font-family: "LemonMilk";
+    cursor: pointer;
+  }
+
+  .desktop-full-styling-button-text:hover,
+  .desktop-partial-styling-button-text:hover,
+  .desktop-mini-styling-button-text:hover {
+    background-color: #38ada0;
+  }
+
+  .hero-text-container-gallery {
+    justify-content: right;
+    align-items: flex-end;
+    height: 100vh;
+  }
+
+  .gallery-title {
+    font-size: 120px;
+    padding: 0px 50px 50px 0px;
+  }
+
+  .slideshow-item-text {
+    width: 25%;
+    padding: 20px 0px 20px 50px;
+  }
+
+  .slideshow-text-header {
+    font-size: 26px;
+  }
+
+  .slideshow-text {
+    font-size: 18px;
+  }
+
+  .about-title {
+    font-size: 120px;
+    padding: 0px 50px 50px 0px;
+  }
+
+  .about-image-container {
+    display: inline;
+    background-image: url("../images/about-us.jpg");
+    background-position: 10% center;
+    background-size: cover;
+    object-fit: cover;
+    height: 50vh;
+    width: 100%;
+    height: 100vh;
+    width: 50vw;
+  }
+
+  .about-image-container-mobile {
+    display: none;
+  }
+}
